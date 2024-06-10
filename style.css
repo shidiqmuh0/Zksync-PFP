@@ -64,8 +64,8 @@ button:hover {
 .image-container {
     position: relative;
     width: 100%;
-    max-width: 400px;
-    height: 400px;
+    max-width: 350px;
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,11 +95,11 @@ canvas {
 }
 
 #saveBtn {
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 #credits {
-    margin-top: 10px; /* Pushes the footer to the bottom of the page */
+    margin-top: 20px; /* Pushes the footer to the bottom of the page */
     text-align: center; /* Center-align text */
     width: 100%; /* Full width */ 
     font-size: 14px;
