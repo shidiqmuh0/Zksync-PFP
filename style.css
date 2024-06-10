@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6B73FF 10%, #000DFF 100%);
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.image-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.profile-pic {
+    display: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    object-fit: cover;
+}
+
+canvas {
+    display: none;
+}
+
+input[type="file"] {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #45a049;
+}
