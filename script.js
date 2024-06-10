@@ -17,7 +17,24 @@ upload.addEventListener('change', function(event) {
 
             tempCanvas.width = 500;
             tempCanvas.height = 500;
-            tempCtx.drawImage(img, 0, 0, tempCanvas.width, tempCanvas.height);
+
+            // Calculate the aspect ratio
+            const aspectRatio = img.width / img.height;
+            let newWidth, newHeight;
+
+            if (aspectRatio > 1) { // Landscape
+                newWidth = 500;
+                newHeight = 500 / aspectRatio;
+            } else { // Portrait or square
+                newHeight = 500;
+                newWidth = 500 * aspectRatio;
+            }
+
+            // Calculate the position to center the image
+            const xOffset = (500 - newWidth) / 2;
+            const yOffset = (500 - newHeight) / 2;
+
+            tempCtx.drawImage(img, xOffset, yOffset, newWidth, newHeight);
 
             profilePic.src = tempCanvas.toDataURL();
             profilePic.style.display = 'block';
