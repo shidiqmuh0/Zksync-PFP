@@ -3,6 +3,7 @@ const profilePic = document.getElementById('profilePic');
 const overlay = document.getElementById('overlay');
 const canvas = document.getElementById('canvas');
 const saveBtn = document.getElementById('saveBtn');
+const shareBtn = document.getElementById('shareBtn');
 
 upload.addEventListener('change', function(event) {
     const file = event.target.files[0];
@@ -59,5 +60,17 @@ saveBtn.addEventListener('click', function() {
         link.href = URL.createObjectURL(blob);
         link.download = 'profile_with_overlay.jpg';
         link.click();
+
+        // Show share button after saving the image
+        const shareURL = URL.createObjectURL(blob);
+        shareBtn.href = `https://twitter.com/intent/tweet?text=#Zksync_PFP`;
+        shareBtn.style.display = 'block';
     }, 'image/jpeg');
+});
+
+shareBtn.addEventListener('click', function() {
+    const text = encodeURIComponent("#Zksync_PFP");
+    const shareURL = shareBtn.href;
+    const tweetURL = `https://twitter.com/intent/tweet?text=${text}`;
+    window.open(tweetURL, '_blank');
 });

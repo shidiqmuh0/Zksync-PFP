@@ -94,7 +94,7 @@ canvas {
     display: none;
 }
 
-#saveBtn {
+#saveBtn #shareBtn {
     margin-top: 30px;
 }
 
@@ -113,4 +113,11 @@ canvas {
 
 #credits a:hover {
     text-decoration: underline; /* Underline on hover */
+}
+
+#downButton {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
 }
